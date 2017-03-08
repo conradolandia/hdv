@@ -1,0 +1,174 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[12pt,letterpaper,final,usenames,dvipsnames]{article}
+\usepackage{fontenc}
+\usepackage{fontspec} 
+\usepackage{phaistos}
+\usepackage{geometry} 
+\usepackage{marginnote}
+\usepackage{metalogo}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\geometry{letterpaper, textwidth=4.3in, textheight=8.5in, marginparsep=7pt, marginparwidth=1.2in}
+
+
+% fuentes
+\defaultfontfeatures{Ligatures=TeX,RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp,+swsh},Numbers={Proportional,OldStyle}}	
+
+\setmainfont{EB Garamond}
+
+\ifxetex
+  \usepackage{xltxtra,xunicode}
+\fi
+
+\usepackage{microtype}
+
+% idioma del documento
+\ifxetex
+  \usepackage{polyglossia}
+  \setmainlanguage{spanish}
+\else
+  \usepackage[spanish]{babel}
+\fi
+
+% viudas, huérfanas y reglas de tipografia francesa
+\frenchspacing
+\ifluatex
+  \usepackage[hyphenation,
+			parindent,
+			lastparline,
+			homeoarchy, 	% estas opciones
+			rivers,		% permiten ver 
+			%draft		% las calaveras y eso usando luatex
+			]{impnattypo}
+\else
+  \usepackage[hyphenation,parindent,lastparline]{impnattypo} 
+\fi
+
+% small caps cheveres
+\newcommand{\smallcaps}[1]{\textsc{\MakeLowercase{#1}}}
+
+\newcommand{\signo}{\LARGE\P}
+\newcommand{\amper}{\textit{\&}}
+
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+
+\setlength\parindent{0in}
+\setlength{\marginparsep}{10pt}
+\reversemarginpar
+
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+\usepackage[bookmarks, colorlinks, breaklinks, 
+	pdftitle={Andres Conrado Montoya Acosta - Curriculum Vitae},
+	pdfauthor={Andres Conrado Montoya Acosta},
+	pdfproducer={http://www.chiquitico.org}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+\hyphenation{com-pu-ta-do-res pla-ta-for-mas}
+
+
+\begin{document}
+{\LARGE Andrés Conrado Montoya Acosta}\\
+{\signo\large\ Diseñador Gráfico}\\[24pt]
+%Carrera 17 nº 44---25, puerta 2, apartamento 202,\\
+%Bogotá, \textsc{cp} 111311. Colombia\\
+%Teléfono: (+571) 245 9192\\
+Correo electrónico: \href{mailto:elandi@chiquitico.org}{elandi@chiquitico.org}\\
+\textsc{url}: \href{http://chiquitico.org}{chiquitico.org} 
+\vfill
+
+\section*{Posición actual}
+\textsc{Diseñador gráfico independiente}, actualmente al servicio de \emph{Logan Ga\-ttis Designs} y \emph{La Productora: Agencia en Artes}, en las áreas de diseño web y diseño editorial. Responsable de publicaciones como la colección de libros \emph{señal que cabalgamos} y la revista de Antropología \emph{Maguaré} (entre otras), en el Centro Editorial de la Facultad de Ciencias Humanas en la Universidad Nacional de Colombia, sede Bogotá, durante los años 2008 a 2010. También responsable del boletín \emph{Educación Superior} publicado por el Ministerio de Educación Nacional, durante seis años, bajo la supervisión de las editoras \href{mailto:cadenasilva@fibertel.com.ar}{Claudia Cadena} \amper\ \href{mailto:olgamarinarango@gmail.com}{Olga Marín Arango}.
+
+\section*{Áreas de especialidad}
+Diseño editorial · Tipografía · Caligrafía · Diseño Web
+
+\section*{Manejo de Software}
+\textsc{Adobe:} InDesign, Illustrator, Photoshop, Flash, Premiere. 
+
+\textsc{Software libre \amper\ otros:} Gimp, Inkscape, Dia, ImageMagick. Varios lenguajes tipográficos derivados de \TeX. Lenguajes de marcado y/o programación: \textsc{html5}, \textsc{css3}, Action Script 2.0, Markdown, Java Script. Fundamentos de: \textsc{sass}, Phyton, Ruby.  Tengo gran habilidad con computadores, y soy capaz de aprender a manejar prácticamente cualquier pieza de software en muy poco tiempo, en plataformas MacOS, Windows, Linux o \textsc{bsd}. 
+
+
+\section*{Educación}
+
+\years{2007}Estudios de Caligrafía con Silvia Cordero Vega. Clase magistral con el maestro calígrafo Ricardo Rousselout. Cursos de fabricación de libros en la Papelera Palermo. Buenos Aires, Argentina.
+
+\years{2006}Título de Diseñador gráfico, Universidad Nacional de Colombia.
+
+\years{1997}Estudios de Artes plásticas, Universidad Nacional de Colombia. 
+
+
+\section*{Algunos Cargos desempeñados}
+
+\years{2012-2014 } Diseñador gráfico y creativo para \href{http://www.logangattis.com}{Logan Gattis Designs}
+
+\years{2011-2014 } Webmaster para la Asociación Cultural \href{http://laredada.org}{LaREDada}, y la Asociación Sindical de Profesores Universitarios \href{http://aspucol.org}{(\textsc{aspu})}. 
+
+\years{2010-2014 } Diseñador gráfico y webmaster para \href{http://agenciaenartes.com}{La Productora}.
+
+\years{2008-2014 } Director de arte y propietario, editorial \href{http://chiquitico.org}{chiquitico.org}, Bogotá. Algunos ibros publicados: \emph{Cuentos de Minicuentos. Una antología póstuma}, de Tundama Ortiz; \emph{Relatos intrascendentes}, de Santiago Hernández; \emph{Lo que aprendimos del amor amando}, de Sonia Ro.
+
+\years{2008-2010}Diseñador para el Centro Editorial de la Facultad de Ciencias Humanas, Universidad Nacional de Colombia, Sede Bogotá. 
+
+\years{2006-2007}Diseño y diagramación del libro \emph{3779 Caballeros: 60 años del Gimnasio Campestre} para la editorial RyL Diseño.
+
+\years{2004-2006}Diseñador gráfico para la editorial \href{http://www.editoraryldiseno.com/}{RyL Diseño}, a cargo de la coordinacion de comites editoriales y el diseño de publicaciones  para instituciones educativas como: Gimnasio Campestre, Colegio Rochester, Colegio Helvetia, Colegio Los Nogales, entre otros.
+
+
+
+\section*{Algunas publicaciones \amper\ diseños digitales}
+
+\years{2012}Diseño del sitio web para el grupo cultural \href{http:\\laredada.org}{laredada.org}.
+
+\years{2012}Implementación y soporte técnico para sitio web \href{http://www.aspucol.org}{aspucol.org} (Asociación Sindical de Profesores Universitarios).
+
+\years{2011}Diseño de sitio web \href{http://www.sonastudio.net}{sonastudio.net}, a cargo de \href{mailto:lindsay@logangattis.com}{Lindsay Gattis}, para \href{http://logangattis.com}{Logan Gattis Designs}.
+
+\years{2011}Multimedia \emph{Huertas familiares... por una nutrición sana}, para la Fundación Santa Fe de Bogotá, proyecto a cargo de \href{mailto:Elsa.Munoz@fsfb.org.co}{Elsa Muñoz}.
+
+\years{2010}Multimedia \emph{Líderes para salvar nuestro planeta}, para la Fundación Santa Fe de Bogotá, proyecto a cargo de \href{mailto:Clara.Amaya@fsfb.org.co}{Clara Amaya}.
+
+\years{2009}Multimedia \emph{Financiera compartir: un caso de éxito en la aplicación de la metodología de micorfinanzas \textsc{midas}}, para \textsc{usaid} y la Financiera Compartir, a cargo de la editora \href{mailto:olgamarinarango@gmail.com}{Olga Marín Arango}.
+
+
+\section*{Referencias}
+
+\subsection*{referencias profesionales}
+
+Lindsay Gattis, \textsc{ceo} \amper\ Creative Director en Logan Gattis Designs.  \href{mailto:lindsay@logangattis.com}{lindsay@logangattis.com}.
+\vspace{6pt}
+
+Sofía Parra, Coordinadora editorial \emph{Revista de Artes Plásticas y Visuales \textsc{errata\#}}, Gerencia Artes Plásticas y Visuales de la Fundación Gilberto Alzate Avendaño. \href{mailto:sofiaparrag@gmail.com}{sofiaparrag@gmail.com}.
+\vspace{6pt}
+
+Clara Victoria Amaya, Educadora y Psicóloga, Fundación Santa Fe de Bogotá.  \href{mailto:Clara.Amaya@fsfb.org.co}{Clara.Amaya@fsfb.org.co}
+
+\subsection*{referencias personales}
+
+Antonio Márquez Bulla, profesor de la Escuela de Diseño Gráfico, Universidad Nacional de Colombia. \href{mailto:antmarbul@gmail.com}{antmarbul@gmail.com}.
+\vspace{6pt}
+
+Carlos Valderrama, editor.  \href{mailto:condorjaguar@gmail.com}{condorjaguar@gmail.com}
+
+\vfill
+
+
+\begin{center}
+{\large\PHplaneTree}
+
+{\scriptsize  Actualizado: \today} 
+
+{\scriptsize  Compuesto con \href{http://en.wikipedia.org/wiki/XeTeX}{\XeTeX} usando tipos \href{http://www.georgduffner.at/ebgaramond/index.html}{\textsc{EB Garamond}}}
+\vspace{6pt}
+
+{\large\href{http://chiquitico.org}{chiquitico.org}}
+\end{center}
+
+\end{document}

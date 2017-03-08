@@ -1,0 +1,91 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[12pt,final,usenames,dvipsnames]{article}
+\usepackage{fontenc}
+\usepackage{phaistos}
+\usepackage{geometry}
+\usepackage{graphicx} 
+\usepackage{marginnote}
+\usepackage{metalogo}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\geometry{letterpaper, textwidth=4.25in, textheight=8.5in, marginparsep=2em, marginparwidth=1.2in}
+
+\usepackage{fontspec}
+
+% fuentes
+\defaultfontfeatures
+		{Ligatures=TeX,
+		RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp},
+		Numbers={Proportional,OldStyle}}
+
+	\setmainfont{EB Garamond}
+	\newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
+
+\usepackage{xltxtra,xunicode}
+
+\usepackage{microtype}
+
+% idioma del documento
+\usepackage{polyglossia}
+\setmainlanguage{english}
+
+\newcommand{\signo}{\LARGE\P}
+\newcommand{\amper}{\textit{\&}\space}
+
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}\noindent}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\marginparsep}{10pt}
+\reversemarginpar
+
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\itshape\small} 
+\usepackage[bookmarks, colorlinks, breaklinks, 
+	pdftitle={Andres Conrado Montoya Acosta - Curriculum Vitae},
+	pdfauthor={Andres Conrado Montoya Acosta},
+	pdfproducer={http://www.chiquitico.org}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+\begin{document}
+{\LARGE Chiquitico.org}\\
+{\signo\large\ Print \amper Book Design}\\[24pt]
+\textsc{e-mail}: \href{mailto:cables@chiquitico.org}{cables@chiquitico.org}\\
+\textsc{url}: \href{http://chiquitico.org}{chiquitico.org} 
+\vfill
+
+\setlength{\parindent}{14pt}
+
+\section*{Who We Are}
+\emph{We are a small publishing house, located in Bogtá, Colombia}, working since 2008, 
+
+\section*{Published Books}
+
+\years{2013}A book. 
+
+\years{2006}Graduated as Graphic Designer, Universidad Nacional de Colombia.
+
+\years{1997}Fine Arts Studies, Universidad Nacional de Colombia.
+
+
+\vfill
+
+
+\begin{center}
+{\large\PHplaneTree}
+
+{\scriptsize  Last Update: \today} 
+
+{\scriptsize  Typeset with \href{http://en.wikipedia.org/wiki/XeTeX}{\XeLaTeX} using the font  \href{http://www.georgduffner.at/ebgaramond/index.html}{\textsc{EB Garamond}}}
+\vspace{6pt}
+
+\href{http://chiquitico.org}{\includegraphics[width=2cm]{chiquitico}}
+\end{center}
+
+\end{document}

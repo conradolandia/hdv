@@ -1,0 +1,249 @@
+﻿% !TEX TS-program = context (luatex)
+% !TEX encoding = UTF-8
+\mainlanguage[es]
+
+% macro todas small caps
+\define[1]\allsc{{\sc\setcharactercasing[word]{#1}}}
+
+% un salto creado para que no indente 
+\usemodule[fancybreak]
+\setupfancybreak[spacebefore=line]
+\definefancybreak[salto][indentnext=no]
+
+% separador
+\define\separador{\salto{%
+  \startalignment[middle]
+    \dontleavehmode
+    \externalfigure[sep] [lines=.2,grid=top]
+  \stopalignment}}
+
+% años
+\definemargindata[years][inmargin][style={\tfx\sc}]
+
+%ampersand
+\define\amper{{\em \&}\space}
+
+
+%% simbolo del arbol
+\definesymbol[arbol]
+  [\getnamedglyphdirect{phaistos}{u101F2}]
+
+% Fuentes
+\loadtypescriptfile[ebgaramond]
+
+\definefontfeature
+  [quality]
+  [protrusion=quality]
+
+\definefontfeature
+  [deco]
+  [swsh=yes]
+
+\definefontfeature
+  [eb-garamond-normal]
+  [eb-garamond-normal,quality,deco]
+
+\definefontfeature
+  [eb-garamond-smallcaps]
+  [eb-garamond-smallcaps,quality]
+
+\setupbodyfont[ebgaramond,12pt]
+\setupcapitals[sc=yes]
+\setupbodyfontenvironment[default][em=italic]
+
+
+%%%%%%%%%%%%%%%%
+% layout
+%%%%%%%%%%%%%%%%
+
+% alineacion y fine tuning de justificados
+\setupalign[lesshyphenation,hz,hanging]
+\setupspacing[packed]
+
+% numeros de pagina abajo al centro
+\setuppagenumbering[location={footer,center}]
+
+\setbreakpoints[compound] % preferir guiones como puntos de particion. 
+\setuptolerance[verytolerant] 
+
+% Tamaño de caja, margenes...
+\setuplayout
+	[backspace=30ex,
+	width=68ex,
+	topspace=12ex,
+	height=140ex,
+	header=1em,
+	headerdistance=1em,
+	footer=1em,
+	footerdistance=2em,
+	margindistance=1em,
+	grid=yes,
+	setups=correcto]
+
+% parrafos
+%\setupwhitespace[line]
+
+%encabezados
+\defineframedtext[cabeza][strut=no,frame=off,width={\hsize},offset=0pt]
+
+\definehead[hdv]   [title] 
+\setuphead[hdv]    [style={\tfd},
+                    before={\begingroup\startcabeza},
+                    after={\blank[-1em]{\tfc \fontchar{paragraph}} {\tfb {\em Diseñador Gráfico}}
+                    \stopcabeza\blank[8*line]\endgroup}]
+                    
+\setuphead[title]   [page=no,continue=yes,after=,before={\blank[line]}]
+\setuphead[subject] [page=no,continue=yes,style=\tf\sc,after=,before={\blank[line]}]
+
+% finis
+\define\finis{
+    \mbox{}\vfill
+    \startalignment[center]
+    {\tfd \symbol[arbol]}\crlf
+    {\tfxx  Última actualización: \date \crlf
+    Diseñado en \from[ctx] usando tipos \from[ebg]}
+    \blank[small]
+    \from[chiq]
+    \stopalignment
+}
+
+	
+%% hyperlinks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setupinteraction[state=start,color=darkcyan]
+
+\useURL[olga]
+    [mailto:olgamarinarango@gmail.com][]
+    [Olga Marín Arango] 
+
+\useURL[claudia]
+    [mailto:cadenasilva@fibertel.com.ar][]
+    [Claudia Cadena Silva] 
+    
+\useURL[lgd]
+    [http://www.logangattis.com/][]
+    [Logan Gattis Designs]
+
+\useURL[chiq]
+    [http://chiquitico.org/][]
+    [Chiquitico.org]
+    
+\useURL[redada]
+    [http://laredada.org/][]
+    [LaREDada]
+    
+\useURL[aspu]
+    [http://aspucol.org/][]
+    [{\sc aspu}]
+    
+\useURL[lpaa]
+    [http://agenciaenartes.com/][]
+    [La Productora, Agencia en Artes]
+    
+\useURL[chi]
+    [http://chiquitico.org][]
+    [Editorial Chiquitico]
+    
+\useURL[ryl]
+    [http://www.editoraryldiseno.com/][]
+    [RyL Diseño]
+
+\useURL[ctx]
+    [http://en.wikipedia.org/wiki/ConTeXt][]
+    [\CONTEXT]
+    
+\useURL[ebg]
+    [http://www.georgduffner.at/ebgaramond/][]
+    [{\sc EB Garamond}]
+    
+\useURL[me]
+    [maito:elandi@chiquitico.org][]
+    [elandi@chiquitico.org]
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\starttext
+
+\starthdv[title={Andrés Conrado Montoya Acosta}]
+
+\starttitle[title={Posición actual}]
+
+{\em Director creativo y ejecutivo}, \from [chi].
+
+\stoptitle
+
+\starttitle[title={Última posición}]
+
+{\em Director creativo} para {\em \from[lgd]} \amper {\em \from[lpaa]}. 
+
+\stoptitle
+
+\starttitle[title={Áreas de experiencia}]
+
+Diseño de libros · Tipografía · Caligrafía · Diseño Web
+
+\startsubject[title={Software propietario}]
+
+{\sc Adobe:} InDesign, Illustrator, Photoshop, Acrobat.
+
+\stopsubject 
+
+\startsubject[title={Software Libre \amper\ otras habilidades técnicas}]
+
+Gimp, Inkscape, Dia, ImageMagick, PdfTk. Lenguajes de composición tipográfica basados en \TEX, tales como  
+\LATEX\space\amper\CONTEXT. Lenguajes de marcado y de programación: \allsc{html5}, \allsc{css3}, \allsc{sass}, Markdown. Fundamentos de: Java Script, Phyton, Ruby. {\em Power User} avanzado, capaz de aprender a manejar prácticamente cualquier pieza de software en muy poco tiempo, sin importar el sistema operativo).
+
+\stopsubject
+
+\stoptitle
+
+
+
+\starttitle[title={Educación}]
+
+\years{2007} Buenos Aires, Argentina: Talleres y lecciones de caligrafía con la maestra Silvia Cordero Vega y el maestro Ricardo Rousselout. Cursos de fabricación de libros en la Papelera Palermo.
+
+\years{2006} Graduado como Diseñador Gráfico en la Universidad Nacional de Colombia, 
+con énfasis en caligrafía, tipografía y diseño de libros.
+
+\years{1997} Estudios no completados de Artes Plásticas, en la Universidad Nacional de Colombia. 
+
+\stoptitle
+
+
+
+
+\starttitle[title={Experiencia}]
+
+\years{2008-presente} Propietario de la \from[chi] en Bogotá, Colombia.
+
+\years{2012-presente} Creative Director para \from[lgd].
+
+\years{2011-2012} Graphic designer para \from[lgd].
+
+\years{2011-2013} Webmaster para la Asociación Cultural \from[redada], y la Asociación Sindical de Profesores Universitarios, \from[aspu].
+
+\years{2010-2013} Diseñador gráfico \amper webmaster para \from[lpaa].
+
+\years{2008-2010} Diseño de libros para el Centro Editorial de la Facultad de Ciencias Humanas, Universidad Nacional de Colombia, sede Bogotá. 
+
+\years{2004-2010} Diseñador para el magazín {\em Educación Superior}, publicada por el Ministerio de Educación Nacional, bajo la dirección de la editora \from[olga].
+
+\years{2004-2007}Diseñador Gráfico para la editorial \from[ryl]. 
+
+\stoptitle
+
+\starttitle[title={Referencias}]
+
+Para obtener referencias, escribir a: \from[me].
+
+\stoptitle
+
+\stophdv
+
+\finis
+
+\stoptext
+

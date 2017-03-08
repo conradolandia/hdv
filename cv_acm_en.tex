@@ -1,0 +1,123 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[12pt,final,usenames,dvipsnames]{article}
+\usepackage{fontenc}
+\usepackage{phaistos}
+\usepackage{geometry}
+\usepackage{graphicx} 
+\usepackage{marginnote}
+\usepackage{metalogo}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\geometry{letterpaper, textwidth=4.25in, textheight=8.5in, marginparsep=2em, marginparwidth=1.2in}
+
+\usepackage{fontspec}
+
+% fuentes
+\defaultfontfeatures
+		{Ligatures=TeX,
+		RawFeature={+hlig,+clig,+dlig,+cv11,+cv90,+calt,+ccmp},
+		Numbers={Proportional,OldStyle}}
+
+	\setmainfont{EB Garamond}
+	\newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
+
+\usepackage{xltxtra,xunicode}
+
+\usepackage{microtype}
+
+
+% idioma del documento
+\usepackage{polyglossia}
+\setmainlanguage{english}
+
+\newcommand{\signo}{\LARGE\P}
+\newcommand{\amper}{\textit{\&}\space}
+
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+
+\setlength{\parindent}{0in}
+\setlength{\marginparsep}{10pt}
+\reversemarginpar
+
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\itshape\small} 
+\usepackage[bookmarks, colorlinks, breaklinks, 
+	pdftitle={Andres Conrado Montoya Acosta - Curriculum Vitae},
+	pdfauthor={Andres Conrado Montoya Acosta},
+	pdfproducer={http://www.chiquitico.org}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+\begin{document}
+{\LARGE Andrés Conrado Montoya Acosta}\\
+{\signo\large\ Book Designer \amper Front End Developer}\\[24pt]
+%Carrera 17 nº 44---25, puerta 2, apartamento 202,\\
+%Bogotá, \textsc{cp} 111311. Colombia\\
+%Teléfono: (+571) 245 9192\\
+\textsc{e-mail}: \href{mailto:elandi@chiquitico.org}{elandi@chiquitico.org}\\
+\textsc{url}: \href{http://chiquitico.org}{chiquitico.org} 
+\vfill
+
+\section*{Current position}
+\emph{Freelance Graphic Designer}, currently providing services to \emph{Logan Gattis Designs} \amper \emph{La Productora: agencia en artes}, as a Creative Director, in Web and Print Design. Designer for publications like the book series \emph{señal que cabalgamos}, and Anthropology Magazine \emph{Maguaré} (among others), in the Human Studies Faculty Editorial Center, National University of Colombia, between 2008--2010. Senior Designer for the \emph{Educación Superior} Magazine, a publication of the National Education Ministry, supervised by Editors \href{mailto:cadenasilva@fibertel.com.ar}{Claudia Cadena} \amper\ \href{mailto:olgamarinarango@gmail.com}{Olga Marín Arango}.
+
+\section*{Specialty Areas}
+Editorial \amper\ Book Design · Typography · Calligraphy · Web Design
+
+\subsection*{Propietary Software}
+\textsc{Adobe:} InDesign, Illustrator, Photoshop, Acrobat.
+
+\subsection*{Free Software \amper\ Other Technical Abilities} 
+Gimp, Inkscape, Dia, ImageMagick. Typesetting languages derived from \TeX, as La\TeX\space\amper \space Con\TeX t. 
+
+Markup and/or programming languages: \textsc{html5}, \textsc{css3}, Java Script, Markdown. Fundaments in: \textsc{sass}, Phyton, Ruby.  Advanced Power User, able to learn and use practically any piece of sofware in very little time, regardless the OS).
+
+
+\section*{Education}
+
+\years{2007}Calligraphy workshops and lessons with Master Silvia Cordero Vega \amper\ Master Ricardo Rousselout. Book making courses in Papelera Palermo. Buenos Aires, Argentina.
+
+\years{2006}Graduated as Graphic Designer, Universidad Nacional de Colombia.
+
+\years{1997}Fine Arts Studies, Universidad Nacional de Colombia.
+
+
+\section*{Experience}
+
+\years{2012-Current} Creative Director for \href{http://www.logangattis.com}{Logan Gattis Designs}
+
+\years{2011-2012} Graphic designer for \href{http://www.logangattis.com}{Logan Gattis Designs}
+
+\years{2011-Current} Webmaster For the Cultural Group \href{http://laredada.org}{LaREDada}, and the Asociación Sindical de Profesores Universitarios \href{http://aspucol.org}{(\textsc{aspu})}.
+
+\years{2010-Current} Graphic designer \amper webmaster for \href{http://agenciaenartes.com}{La Productora, Agencia en Artes}.
+
+\years{2008-Current} Owner, \href{http://chiquitico.org}{Chiquitico Press}, Bogotá.
+
+\years{2008-2010}Book Designer For the Editorial Center, Human Studies Faculty, Universidad Nacional de Colombia, in Bogotá. 
+
+\years{2004-2007}Graphic \amper Book Designer for the publishing house \href{http://www.editoraryldiseno.com/}{RyL Diseño}, in charge of coordination of editorial groups and design of publications for schools as: Gimnasio Campestre, Colegio Rochester, Colegio Helvetia, Colegio Los Nogales, among others.
+
+\section*{References}
+For references, please write to elandi@chiquitico.org.
+
+\vfill
+
+
+\begin{center}
+{\large\PHplaneTree}
+
+{\scriptsize  Last Update: \today} 
+
+{\scriptsize  Typeset with \href{http://en.wikipedia.org/wiki/XeTeX}{\XeLaTeX} using the font  \href{http://www.georgduffner.at/ebgaramond/index.html}{\textsc{EB Garamond}}}
+\vspace{6pt}
+
+\href{http://chiquitico.org}{\includegraphics[width=2cm]{chiquitico}}
+\end{center}
+
+\end{document}
